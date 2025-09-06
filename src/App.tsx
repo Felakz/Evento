@@ -40,55 +40,49 @@ function App() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900 flex items-center justify-center p-6">
-      <div className="max-w-2xl w-full bg-white rounded-[28px] overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-all duration-300">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900 flex items-center justify-center p-2 sm:p-4 lg:p-6">
+      <div className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-2xl xl:max-w-3xl bg-white rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-all duration-300">
         
-        {/* Header con imagen de fondo real */}
-        <div className="relative h-80 overflow-hidden">
-          {/* Imagen de fondo real */}
-          <div className="absolute inset-0">
-            <img 
-              src={imagen1} 
-              alt="ACTIVZ 2025 Tour Corporativo" 
-              className="w-full h-full object-cover"
-              onError={(e) => {
-                console.log('Error cargando imagen:', e);
-                e.currentTarget.style.display = 'none';
-              }}
-              onLoad={() => {
-                console.log('Imagen cargada correctamente');
-              }}
-            />
-            {/* Fallback si la imagen no carga */}
-            <div className="absolute inset-0 bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-900"></div>
-          </div>
+        {/* Header con imagen de fondo - Responsivo */}
+        <div className="relative h-48 sm:h-56 md:h-64 lg:h-80 overflow-hidden">
+          {/* Imagen de fondo usando img element */}
+          <img 
+            src={imagen1} 
+            alt="ACTIVZ 2025 Header" 
+            className="absolute inset-0 w-full h-full object-cover z-10"
+            onLoad={() => console.log('Imagen desde assets cargada')}
+            onError={(e) => {
+              console.log('Error con imagen de assets, intentando desde public');
+              e.currentTarget.src = '/imagen-header.jpg';
+            }}
+          />
           
-          {/* Overlay oscuro para mejorar legibilidad del texto */}
-          <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+          {/* Fallback con gradiente si ninguna imagen carga */}
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-900 via-purple-800 to-purple-700 z-0"></div>
           
-          {/* Tag superior */}
-          <div className="absolute top-6 left-6 bg-black bg-opacity-70 backdrop-blur-sm px-4 py-2 rounded-full">
-            <span className="text-white text-sm font-semibold">Salud - Epigenética</span>
+          {/* Tag superior - Responsivo */}
+          <div className="absolute top-3 left-3 sm:top-4 sm:left-4 lg:top-6 lg:left-6 bg-black bg-opacity-70 backdrop-blur-sm px-2 py-1 sm:px-3 sm:py-2 lg:px-4 lg:py-2 rounded-full z-30">
+            <span className="text-white text-xs sm:text-sm font-semibold">Salud - Epigenética</span>
           </div>
           
           {/* Overlay de degradado inferior */}
-          <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-black/40 via-black/20 to-transparent"></div>
+          <div className="absolute bottom-0 left-0 right-0 h-16 sm:h-20 lg:h-24 bg-gradient-to-t from-black/40 via-black/20 to-transparent z-15"></div>
           
-          {/* Título principal sobre la imagen */}
-          <div className="absolute bottom-6 left-6 right-6">
-            <h1 className="text-3xl font-black text-white mb-2 leading-tight drop-shadow-lg">
+          {/* Título principal sobre la imagen - Responsivo */}
+          <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 lg:bottom-6 lg:left-6 lg:right-6 z-20">
+            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black text-white mb-1 sm:mb-2 leading-tight drop-shadow-lg">
               ACTIVZ 2025
             </h1>
-            <p className="text-gray-200 text-sm leading-relaxed drop-shadow-md">
+            <p className="text-gray-200 text-xs sm:text-sm md:text-base leading-relaxed drop-shadow-md">
               Tour Corporativo (Sudamerica)
             </p>
           </div>
         </div>
 
-        {/* Contenido principal */}
-        <div className="p-8 bg-white">
+        {/* Contenido principal - Responsivo */}
+        <div className="p-4 sm:p-6 lg:p-8 bg-white">
           {/* Grid de información del evento */}
-          <div className="grid grid-cols-2 gap-4 mb-8">
+          <div className="grid grid-cols-2 gap-2 sm:gap-3 lg:gap-4 mb-6 sm:mb-8">
             <div className="bg-blue-50 rounded-2xl p-5 border border-blue-100 hover:bg-blue-100 transition-colors">
               <div className="flex items-center mb-3">
                 <div className="w-4 h-4 bg-blue-500 rounded-full mr-3"></div>
@@ -234,30 +228,30 @@ function App() {
         </div>
 
         {/* Footer */}
-        <div className="bg-gray-900 px-8 py-6">
-          <h4 className="text-white font-black mb-4 text-lg">Información de Contacto</h4>
-          <div className="text-sm text-gray-300 space-y-3 font-medium">
+        <div className="bg-gray-900 px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
+          <h4 className="text-white font-black mb-3 sm:mb-4 text-base sm:text-lg">Información de Contacto</h4>
+          <div className="text-sm text-gray-300 space-y-2 sm:space-y-3 font-medium">
             <div className="flex items-center">
-              <span className="mr-4 text-lg">📞</span>
-              <span>(+51) 900653836</span>
+              <span className="mr-3 sm:mr-4 text-base sm:text-lg">📞</span>
+              <span className="text-xs sm:text-sm">(+51) 900653836</span>
             </div>
             <div className="flex items-center">
-              <span className="mr-4 text-lg">✉️</span>
-              <span>mirianmautino11@gmail.com</span>
+              <span className="mr-3 sm:mr-4 text-base sm:text-lg">✉️</span>
+              <span className="text-xs sm:text-sm">mirianmautino11@gmail.com</span>
             </div>
             <div className="flex items-center">
-              <span className="mr-4 text-lg">🌐</span>
+              <span className="mr-3 sm:mr-4 text-base sm:text-lg">🌐</span>
               <a 
                 href="https://miriam-mautino.vercel.app" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="hover:underline cursor-pointer"
+                className="hover:underline cursor-pointer text-xs sm:text-sm"
               >
                 miriam-mautino.vercel.app
               </a>
             </div>
           </div>
-          <p className="text-xs text-gray-500 mt-5 font-semibold">
+          <p className="text-xs text-gray-500 mt-4 sm:mt-5 font-semibold">
             Síguenos en nuestras redes sociales para más actualizaciones
           </p>
         </div>
