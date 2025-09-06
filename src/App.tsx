@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import imagen1 from './assets/imagen1.jpg'
+import wasaico from './assets/wasaico.png'
 
 function App() {
   const [timeLeft, setTimeLeft] = useState({
@@ -217,13 +218,18 @@ function App() {
             href="https://bit.ly/GrupoActivaTuLiderazgo" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="block w-full bg-gray-900 text-white py-5 rounded-2xl font-black text-xl hover:bg-gray-800 transition-all duration-300 transform hover:scale-[1.02] shadow-lg mb-4 text-center"
+            className="flex items-center justify-center w-full bg-gray-900 text-white py-5 rounded-2xl font-black text-xl hover:bg-gray-800 transition-all duration-300 transform hover:scale-[1.02] shadow-lg mb-4"
           >
-            📱 Reservar Entrada
+            <img 
+              src={wasaico} 
+              alt="WhatsApp" 
+              className="w-6 h-6 mr-3"
+            />
+            Reservar Entrada
           </a>
           
           <p className="text-center text-sm text-gray-600 font-bold">
-            Únete a nuestro grupo para reservar tu entrada
+            Únete a nuestro grupo de WhatsApp para reservar tu entrada.
           </p>
         </div>
 
