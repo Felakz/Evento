@@ -252,7 +252,7 @@ function App() {
             </div>
           </div>
           <p className="text-xs text-gray-500 mt-4 sm:mt-5 font-semibold">
-            Síguenos en nuestras redes sociales para más actualizaciones
+            Esta Web fue hecha por J&C Studios 
           </p>
         </div>
       </div>
