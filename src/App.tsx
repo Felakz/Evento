@@ -116,51 +116,51 @@ function App() {
             </div>
           </div>
 
-          {/* Sección de countdown */}
-          <div className="mb-8">
-            <div className="text-center mb-6">
-              <p className="text-lg text-gray-600 font-semibold mb-2">Tiempo restante para el evento</p>
+          {/* Sección de countdown - Responsivo mejorado */}
+          <div className="mb-6 sm:mb-8">
+            <div className="text-center mb-4 sm:mb-6">
+              <p className="text-base sm:text-lg text-gray-600 font-semibold mb-2">Tiempo restante para el evento</p>
             </div>
             
-            <div className="grid grid-cols-4 gap-4 mb-6">
-              <div className="bg-gray-800 rounded-2xl p-6 text-center shadow-xl">
-                <div className="text-4xl font-black text-white mb-2">{timeLeft.days.toString().padStart(2, '0')}</div>
-                <div className="text-sm text-gray-300 font-bold uppercase tracking-wider">DÍAS</div>
+            <div className="grid grid-cols-4 gap-2 sm:gap-3 lg:gap-4 mb-4 sm:mb-6">
+              <div className="bg-gray-800 rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-6 text-center shadow-xl">
+                <div className="text-xl sm:text-2xl lg:text-4xl font-black text-white mb-1 sm:mb-2">{timeLeft.days.toString().padStart(2, '0')}</div>
+                <div className="text-xs sm:text-sm text-gray-300 font-bold uppercase tracking-wider">DÍAS</div>
               </div>
-              <div className="bg-gray-800 rounded-2xl p-6 text-center shadow-xl">
-                <div className="text-4xl font-black text-white mb-2">{timeLeft.hours.toString().padStart(2, '0')}</div>
-                <div className="text-sm text-gray-300 font-bold uppercase tracking-wider">HORAS</div>
+              <div className="bg-gray-800 rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-6 text-center shadow-xl">
+                <div className="text-xl sm:text-2xl lg:text-4xl font-black text-white mb-1 sm:mb-2">{timeLeft.hours.toString().padStart(2, '0')}</div>
+                <div className="text-xs sm:text-sm text-gray-300 font-bold uppercase tracking-wider">HORAS</div>
               </div>
-              <div className="bg-gray-800 rounded-2xl p-6 text-center shadow-xl">
-                <div className="text-4xl font-black text-white mb-2">{timeLeft.minutes.toString().padStart(2, '0')}</div>
-                <div className="text-sm text-gray-300 font-bold uppercase tracking-wider">MINUTOS</div>
+              <div className="bg-gray-800 rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-6 text-center shadow-xl">
+                <div className="text-xl sm:text-2xl lg:text-4xl font-black text-white mb-1 sm:mb-2">{timeLeft.minutes.toString().padStart(2, '0')}</div>
+                <div className="text-xs sm:text-sm text-gray-300 font-bold uppercase tracking-wider">MIN</div>
               </div>
-              <div className="bg-gray-800 rounded-2xl p-6 text-center shadow-xl">
-                <div className="text-4xl font-black text-white mb-2">{timeLeft.seconds.toString().padStart(2, '0')}</div>
-                <div className="text-sm text-gray-300 font-bold uppercase tracking-wider">SEGUNDOS</div>
+              <div className="bg-gray-800 rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-6 text-center shadow-xl">
+                <div className="text-xl sm:text-2xl lg:text-4xl font-black text-white mb-1 sm:mb-2">{timeLeft.seconds.toString().padStart(2, '0')}</div>
+                <div className="text-xs sm:text-sm text-gray-300 font-bold uppercase tracking-wider">SEG</div>
               </div>
             </div>
             
-            <p className="text-center text-lg text-purple-600 font-black">
-              No te pierdas esta experiencia única!
+            <p className="text-center text-sm sm:text-base lg:text-lg text-purple-600 font-black">
+              ¡No te pierdas esta experiencia única!
             </p>
           </div>
 
-          {/* Descripción del evento */}
-          <div className="bg-gradient-to-r from-gray-50 via-purple-50 to-pink-50 rounded-2xl p-6 mb-8 border border-purple-100">
-            <h3 className="font-black text-gray-900 mb-4 text-xl">Sobre el Evento</h3>
-            <p className="text-sm text-gray-700 leading-relaxed font-medium mb-4">
+          {/* Descripción del evento - Responsivo mejorado */}
+          <div className="bg-gradient-to-r from-gray-50 via-purple-50 to-pink-50 rounded-xl sm:rounded-2xl p-4 sm:p-6 mb-6 sm:mb-8 border border-purple-100">
+            <h3 className="font-black text-gray-900 mb-3 sm:mb-4 text-lg sm:text-xl">Sobre el Evento</h3>
+            <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-medium mb-4">
               Prepárate para una experiencia única con nuestra presentación de oportunidad. 
               Un evento diseñado para descubrir nuevas posibilidades y conectar con los mejores.
             </p>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="bg-white rounded-lg p-4 border border-purple-200">
-                <h4 className="font-black text-purple-800 mb-2">4:00 PM - Primera Sección</h4>
-                <p className="text-xs text-gray-600">Capacitación</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+              <div className="bg-white rounded-lg p-3 sm:p-4 border border-purple-200">
+                <h4 className="font-black text-purple-800 mb-1 sm:mb-2 text-sm sm:text-base">4:00 PM - Primera Sección</h4>
+                <p className="text-xs sm:text-sm text-gray-600">Capacitación</p>
               </div>
-              <div className="bg-white rounded-lg p-4 border border-pink-200">
-                <h4 className="font-black text-pink-800 mb-2">7:00 PM - Segunda Sección</h4>
-                <p className="text-xs text-gray-600">Presentación de oportunidad</p>
+              <div className="bg-white rounded-lg p-3 sm:p-4 border border-pink-200">
+                <h4 className="font-black text-pink-800 mb-1 sm:mb-2 text-sm sm:text-base">7:00 PM - Segunda Sección</h4>
+                <p className="text-xs sm:text-sm text-gray-600">Presentación de oportunidad</p>
               </div>
             </div>
           </div>
